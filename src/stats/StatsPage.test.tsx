@@ -1,5 +1,5 @@
 import { screen, waitFor } from '@testing-library/react';
-import { renderWithProviders } from './test-utils';
+import { renderWithProviders } from '@src/test-utils';
 import StatsPage from './StatsPage';
 import * as api from './api';
 import { CourseBadgeStatsResponse } from './types';

@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { renderWithProviders } from './test-utils';
+import { renderWithProviders } from '@src/test-utils';
 import SummaryTable from './SummaryTable';
 import { BadgeStats } from './types';
 import * as api from './api';

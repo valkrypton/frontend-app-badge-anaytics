@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import { renderWithProviders } from './test-utils';
+import { renderWithProviders } from '@src/test-utils';
 import TrendModal from './TrendModal';
 import { BadgeStats } from './types';
 
@@ -21,12 +21,12 @@ describe('TrendModal', () => {
   it('renders the daily award counts for the given badge', () => {
     renderWithProviders(<TrendModal badge={badge} onClose={jest.fn()} />);
     expect(screen.getByText('Great Job — awards per day')).toBeInTheDocument();
-    expect(screen.getByText('2026-09-01')).toBeInTheDocument();
-    expect(screen.getByText('2026-09-02')).toBeInTheDocument();
+    expect(screen.getByText('Sep 1, 2026')).toBeInTheDocument();
+    expect(screen.getByText('Sep 2, 2026')).toBeInTheDocument();
   });
 
   it('renders closed when no badge is selected', () => {
     renderWithProviders(<TrendModal badge={null} onClose={jest.fn()} />);
-    expect(screen.queryByText('2026-09-01')).not.toBeInTheDocument();
+    expect(screen.queryByText('Sep 1, 2026')).not.toBeInTheDocument();
   });
 });
