@@ -13,7 +13,7 @@ const TrendModal = ({ badge, onClose }: Props) => {
   const title = badge ? formatMessage(messages['badgeAnalytics.trend.title'], { badgeName: badge.badgeName }) : '';
 
   return (
-    <ModalDialog title={title} isOpen={badge !== null} onClose={onClose} hasCloseButton>
+    <ModalDialog title={title} isOpen={badge !== null} onClose={onClose} hasCloseButton isOverflowVisible={false}>
       <ModalDialog.Header>
         <ModalDialog.Title>{title}</ModalDialog.Title>
       </ModalDialog.Header>

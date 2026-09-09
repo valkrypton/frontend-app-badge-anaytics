@@ -111,6 +111,21 @@ const messages = defineMessages({
     defaultMessage: 'View learners',
     description: 'Button to open the learner progress modal for a badge',
   },
+  'badgeAnalytics.heading': {
+    id: 'badgeAnalytics.heading',
+    defaultMessage: 'Badge Analytics',
+    description: 'Page heading for the badge analytics page',
+  },
+  'badgeAnalytics.summary.error': {
+    id: 'badgeAnalytics.summary.error',
+    defaultMessage: 'Could not load badge stats. Please try again.',
+    description: 'Error shown when the badge summary request fails',
+  },
+  'badgeAnalytics.summary.empty': {
+    id: 'badgeAnalytics.summary.empty',
+    defaultMessage: 'No badge stats yet — they appear after the next scheduled refresh.',
+    description: 'Shown when badges exist but no stats have been computed yet',
+  },
 });
 
 export default messages;

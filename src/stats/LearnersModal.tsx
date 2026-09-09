@@ -31,7 +31,7 @@ const LearnersModal = ({ courseId, badgeId, badgeName, onClose }: Props) => {
   const title = formatMessage(messages['badgeAnalytics.learners.title'], { badgeName });
 
   return (
-    <ModalDialog title={title} isOpen={badgeId !== null} onClose={handleClose} hasCloseButton>
+    <ModalDialog title={title} isOpen={badgeId !== null} onClose={handleClose} hasCloseButton isOverflowVisible={false}>
       <ModalDialog.Header>
         <ModalDialog.Title>{title}</ModalDialog.Title>
       </ModalDialog.Header>
