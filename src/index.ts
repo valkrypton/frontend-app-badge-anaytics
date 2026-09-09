@@ -1,2 +1,2 @@
-export { default as badgeAnalyticsApp } from './app';
-export { default as badgeAnalyticsRoutes } from './routes';
+export { default as badgesApp } from './app';
+export { default as badgesRoutes } from './routes';

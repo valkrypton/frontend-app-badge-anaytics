@@ -11,7 +11,7 @@ const siteConfig: SiteConfig = {
 
   environment: EnvironmentTypes?.TEST ?? 'test',
   apps: [{
-    appId: 'org.openedx.frontend.app.badgeAnalytics',
+    appId: 'org.openedx.frontend.app.badges',
   }],
 };
 

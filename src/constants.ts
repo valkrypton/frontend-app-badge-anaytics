@@ -1,2 +1,2 @@
-export const appId = 'org.openedx.frontend.app.badgeAnalytics';
-export const badgeAnalyticsRole = 'org.openedx.frontend.role.badgeAnalytics';
+export const appId = 'org.openedx.frontend.app.badges';
+export const badgesRole = 'org.openedx.frontend.role.badges';
