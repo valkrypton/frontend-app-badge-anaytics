@@ -5,9 +5,9 @@ import { Badge, BadgeInput } from './types';
 import messages from './messages';
 
 interface Props {
-  initialValues?: Badge;
-  onSubmit: (input: BadgeInput) => void;
-  onCancel?: () => void;
+  initialValues?: Badge,
+  onSubmit: (input: BadgeInput) => void,
+  onCancel?: () => void,
 }
 
 const BadgeForm = ({ initialValues, onSubmit, onCancel }: Props) => {

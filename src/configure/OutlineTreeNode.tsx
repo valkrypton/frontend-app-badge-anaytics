@@ -6,10 +6,10 @@ import { OutlineNode } from './types';
 import messages from './messages';
 
 interface Props {
-  node: OutlineNode;
-  depth: number;
-  badges: { id: number; name: string }[];
-  courseId: string;
+  node: OutlineNode,
+  depth: number,
+  badges: { id: number, name: string }[],
+  courseId: string,
 }
 
 const OutlineTreeNode = ({
@@ -19,7 +19,7 @@ const OutlineTreeNode = ({
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: (input: { badgeEnabled: boolean; badgeId: number | null }) => (
+    mutationFn: (input: { badgeEnabled: boolean, badgeId: number | null }) => (
       setBlockBadgeConfig(node.usageKey, input.badgeEnabled, input.badgeId)
     ),
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['badge-outline', courseId] }),

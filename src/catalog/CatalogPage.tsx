@@ -31,7 +31,7 @@ const CatalogPage = () => {
     onSuccess: invalidate,
   });
   const updateMutation = useMutation({
-    mutationFn: ({ badgeId, input }: { badgeId: number; input: BadgeInput }) => (
+    mutationFn: ({ badgeId, input }: { badgeId: number, input: BadgeInput }) => (
       updateBadge(courseId as string, badgeId, input)
     ),
     onSuccess: () => {

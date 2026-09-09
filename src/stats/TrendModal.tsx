@@ -5,8 +5,8 @@ import messages from './messages';
 import { DATE_ONLY_FORMAT } from './dateUtils';
 
 interface Props {
-  badge: BadgeStats | null;
-  onClose: () => void;
+  badge: BadgeStats | null,
+  onClose: () => void,
 }
 
 const TrendModal = ({ badge, onClose }: Props) => {

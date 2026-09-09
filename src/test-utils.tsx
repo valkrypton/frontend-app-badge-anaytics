@@ -5,8 +5,8 @@ import { IntlProvider } from '@openedx/frontend-base';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 interface Options {
-  route?: string;
-  path?: string;
+  route?: string,
+  path?: string,
 }
 
 export function renderWithProviders(ui: ReactElement, { route = '/', path = '/' }: Options = {}) {

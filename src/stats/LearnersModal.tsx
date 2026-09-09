@@ -7,10 +7,10 @@ import messages from './messages';
 import { DATE_ONLY_FORMAT } from './dateUtils';
 
 interface Props {
-  courseId: string;
-  badgeId: number | null;
-  badgeName: string;
-  onClose: () => void;
+  courseId: string,
+  badgeId: number | null,
+  badgeName: string,
+  onClose: () => void,
 }
 
 const LearnersModal = ({ courseId, badgeId, badgeName, onClose }: Props) => {

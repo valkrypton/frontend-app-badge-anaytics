@@ -7,8 +7,8 @@ import LearnersModal from './LearnersModal';
 import messages from './messages';
 
 interface Props {
-  courseId: string;
-  badges: BadgeStats[];
+  courseId: string,
+  badges: BadgeStats[],
 }
 
 const SummaryTable = ({ courseId, badges }: Props) => {
