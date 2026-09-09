@@ -1,10 +1,10 @@
 import { defineMessages } from '@openedx/frontend-base';
 
 const messages = defineMessages({
-  'badgeAnalytics.page.title': {
-    id: 'badgeAnalytics.page.title',
-    defaultMessage: 'Badge Analytics | {siteName}',
-    description: 'Document title for the badge analytics app',
+  'badges.page.title': {
+    id: 'badges.page.title',
+    defaultMessage: 'Badges | {siteName}',
+    description: 'Document title for the badges app',
   },
 });
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Button } from '@openedx/paragon';
 import { useIntl } from '@openedx/frontend-base';
 import { BadgeStats } from './types';
@@ -18,36 +18,35 @@ const SummaryTable = ({ courseId, badges }: Props) => {
 
   return (
     <>
-      <table className="table">
+      <table className="table badges-summary-table">
         <thead>
           <tr>
-            <th>{formatMessage(messages['badgeAnalytics.summary.badgeColumn'])}</th>
-            <th>{formatMessage(messages['badgeAnalytics.summary.enrolledColumn'])}</th>
-            <th>{formatMessage(messages['badgeAnalytics.summary.completedColumn'])}</th>
-            <th>{formatMessage(messages['badgeAnalytics.summary.awardedColumn'])}</th>
-            <th>{formatMessage(messages['badgeAnalytics.summary.rateColumn'])}</th>
-            <th>{formatMessage(messages['badgeAnalytics.summary.updatedColumn'])}</th>
-            <th aria-hidden="true" />
+            <th>{formatMessage(messages['badges.analytics.summary.badgeColumn'])}</th>
+            <th>{formatMessage(messages['badges.analytics.summary.enrolledColumn'])}</th>
+            <th>{formatMessage(messages['badges.analytics.summary.awardedColumn'])}</th>
+            <th>{formatMessage(messages['badges.analytics.summary.rateColumn'])}</th>
           </tr>
         </thead>
         <tbody>
           {badges.map((badge) => (
-            <tr key={badge.badgeId}>
-              <td>{badge.badgeName}</td>
-              <td>{badge.totalEnrolled}</td>
-              <td>{badge.totalCompletedBlock}</td>
-              <td>{badge.totalAwarded}</td>
-              <td>{badge.awardRatePercent}%</td>
-              <td>{badge.computedAt}</td>
-              <td>
-                <Button variant="tertiary" onClick={() => setTrendBadge(badge)}>
-                  {formatMessage(messages['badgeAnalytics.summary.viewTrend'])}
-                </Button>
-                <Button variant="tertiary" onClick={() => setLearnersBadge(badge)}>
-                  {formatMessage(messages['badgeAnalytics.summary.viewLearners'])}
-                </Button>
-              </td>
-            </tr>
+            <Fragment key={badge.badgeId}>
+              <tr>
+                <td>{badge.badgeName}</td>
+                <td>{badge.totalEnrolled}</td>
+                <td>{badge.totalAwarded}</td>
+                <td>{badge.awardRatePercent}%</td>
+              </tr>
+              <tr>
+                <td colSpan={4} className="badges-summary-table__actions">
+                  <Button variant="tertiary" onClick={() => setTrendBadge(badge)}>
+                    {formatMessage(messages['badges.analytics.summary.viewTrend'])}
+                  </Button>
+                  <Button variant="tertiary" onClick={() => setLearnersBadge(badge)}>
+                    {formatMessage(messages['badges.analytics.summary.viewLearners'])}
+                  </Button>
+                </td>
+              </tr>
+            </Fragment>
           ))}
         </tbody>
       </table>

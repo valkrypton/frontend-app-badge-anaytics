@@ -4,6 +4,7 @@ import { Alert, Button, ModalDialog, Spinner } from '@openedx/paragon';
 import { useIntl } from '@openedx/frontend-base';
 import { fetchBadgeLearners, getBadgeLearnersUrl } from './api';
 import messages from './messages';
+import { DATE_ONLY_FORMAT } from './dateUtils';
 
 interface Props {
   courseId: string;
@@ -13,7 +14,7 @@ interface Props {
 }
 
 const LearnersModal = ({ courseId, badgeId, badgeName, onClose }: Props) => {
-  const { formatMessage } = useIntl();
+  const { formatMessage, formatDate } = useIntl();
   const [url, setUrl] = useState<string | null>(null);
   const activeUrl = badgeId !== null ? (url ?? getBadgeLearnersUrl(courseId, badgeId)) : null;
 
@@ -28,27 +29,34 @@ const LearnersModal = ({ courseId, badgeId, badgeName, onClose }: Props) => {
     onClose();
   };
 
-  const title = formatMessage(messages['badgeAnalytics.learners.title'], { badgeName });
+  const title = formatMessage(messages['badges.analytics.learners.title'], { badgeName });
 
   return (
-    <ModalDialog title={title} isOpen={badgeId !== null} onClose={handleClose} hasCloseButton isOverflowVisible={false}>
+    <ModalDialog
+      title={title}
+      isOpen={badgeId !== null}
+      onClose={handleClose}
+      hasCloseButton
+      isOverflowVisible={false}
+      size="lg"
+    >
       <ModalDialog.Header>
         <ModalDialog.Title>{title}</ModalDialog.Title>
       </ModalDialog.Header>
       <ModalDialog.Body>
         {isLoading && (
-          <Spinner animation="border" screenReaderText={formatMessage(messages['badgeAnalytics.loading'])} />
+          <Spinner animation="border" screenReaderText={formatMessage(messages['badges.analytics.loading'])} />
         )}
-        {isError && <Alert variant="danger">{formatMessage(messages['badgeAnalytics.learners.error'])}</Alert>}
+        {isError && <Alert variant="danger">{formatMessage(messages['badges.analytics.learners.error'])}</Alert>}
         {data && (
           <>
-            <table className="table">
+            <table className="table badges-modal-table">
               <thead>
                 <tr>
-                  <th>{formatMessage(messages['badgeAnalytics.learners.learnerColumn'])}</th>
-                  <th>{formatMessage(messages['badgeAnalytics.learners.completionColumn'])}</th>
-                  <th>{formatMessage(messages['badgeAnalytics.learners.earnedColumn'])}</th>
-                  <th>{formatMessage(messages['badgeAnalytics.learners.awardedAtColumn'])}</th>
+                  <th>{formatMessage(messages['badges.analytics.learners.learnerColumn'])}</th>
+                  <th>{formatMessage(messages['badges.analytics.learners.completionColumn'])}</th>
+                  <th>{formatMessage(messages['badges.analytics.learners.earnedColumn'])}</th>
+                  <th>{formatMessage(messages['badges.analytics.learners.awardedAtColumn'])}</th>
                 </tr>
               </thead>
               <tbody>
@@ -58,19 +66,19 @@ const LearnersModal = ({ courseId, badgeId, badgeName, onClose }: Props) => {
                     <td>{row.completionPercent}%</td>
                     <td>
                       {row.earned
-                        ? formatMessage(messages['badgeAnalytics.learners.earnedYes'])
-                        : formatMessage(messages['badgeAnalytics.learners.earnedNo'])}
+                        ? formatMessage(messages['badges.analytics.learners.earnedYes'])
+                        : formatMessage(messages['badges.analytics.learners.earnedNo'])}
                     </td>
-                    <td>{row.awardedAt ?? ''}</td>
+                    <td>{row.awardedAt ? formatDate(row.awardedAt, DATE_ONLY_FORMAT) : ''}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
             <Button variant="tertiary" disabled={!data.previous} onClick={() => setUrl(data.previous)}>
-              {formatMessage(messages['badgeAnalytics.learners.previous'])}
+              {formatMessage(messages['badges.analytics.learners.previous'])}
             </Button>
             <Button variant="tertiary" disabled={!data.next} onClick={() => setUrl(data.next)}>
-              {formatMessage(messages['badgeAnalytics.learners.next'])}
+              {formatMessage(messages['badges.analytics.learners.next'])}
             </Button>
           </>
         )}

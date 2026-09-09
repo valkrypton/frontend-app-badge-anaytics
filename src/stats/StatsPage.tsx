@@ -18,13 +18,13 @@ const StatsPage = () => {
 
   return (
     <Container className="py-5">
-      <h1>{formatMessage(messages['badgeAnalytics.heading'])}</h1>
+      <h1 className="mb-4">{formatMessage(messages['badges.analytics.heading'])}</h1>
       {isLoading && (
-        <Spinner animation="border" screenReaderText={formatMessage(messages['badgeAnalytics.loading'])} />
+        <Spinner animation="border" screenReaderText={formatMessage(messages['badges.analytics.loading'])} />
       )}
-      {isError && <Alert variant="danger">{formatMessage(messages['badgeAnalytics.summary.error'])}</Alert>}
+      {isError && <Alert variant="danger">{formatMessage(messages['badges.analytics.summary.error'])}</Alert>}
       {data && data.badges.length === 0 && (
-        <p>{formatMessage(messages['badgeAnalytics.summary.empty'])}</p>
+        <p>{formatMessage(messages['badges.analytics.summary.empty'])}</p>
       )}
       {data && data.badges.length > 0 && courseId && (
         <SummaryTable courseId={courseId} badges={data.badges} />

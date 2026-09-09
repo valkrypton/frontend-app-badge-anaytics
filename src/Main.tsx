@@ -12,7 +12,7 @@ const Main = () => {
     <CurrentAppProvider appId={appId}>
       <Helmet>
         <title>
-          {formatMessage(messages['badgeAnalytics.page.title'], {
+          {formatMessage(messages['badges.page.title'], {
             siteName: getSiteConfig().siteName,
           })}
         </title>

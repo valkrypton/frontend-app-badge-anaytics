@@ -1,128 +1,123 @@
 import { defineMessages } from '@openedx/frontend-base';
 
 const messages = defineMessages({
-  'badgeAnalytics.trend.title': {
-    id: 'badgeAnalytics.trend.title',
+  'badges.analytics.trend.title': {
+    id: 'badges.analytics.trend.title',
     defaultMessage: '{badgeName} — awards per day',
     description: 'Title of the per-badge award trend modal',
   },
-  'badgeAnalytics.trend.dateColumn': {
-    id: 'badgeAnalytics.trend.dateColumn',
+  'badges.analytics.trend.dateColumn': {
+    id: 'badges.analytics.trend.dateColumn',
     defaultMessage: 'Date',
     description: 'Column header for the trend table date column',
   },
-  'badgeAnalytics.trend.awardsColumn': {
-    id: 'badgeAnalytics.trend.awardsColumn',
+  'badges.analytics.trend.awardsColumn': {
+    id: 'badges.analytics.trend.awardsColumn',
     defaultMessage: 'Awards',
     description: 'Column header for the trend table award-count column',
   },
-  'badgeAnalytics.learners.title': {
-    id: 'badgeAnalytics.learners.title',
+  'badges.analytics.learners.title': {
+    id: 'badges.analytics.learners.title',
     defaultMessage: '{badgeName} — learner progress',
     description: 'Title of the per-badge learner progress modal',
   },
-  'badgeAnalytics.learners.error': {
-    id: 'badgeAnalytics.learners.error',
+  'badges.analytics.learners.error': {
+    id: 'badges.analytics.learners.error',
     defaultMessage: 'Could not load learner progress. Please try again.',
     description: 'Error shown when the learner progress request fails',
   },
-  'badgeAnalytics.learners.learnerColumn': {
-    id: 'badgeAnalytics.learners.learnerColumn',
+  'badges.analytics.learners.learnerColumn': {
+    id: 'badges.analytics.learners.learnerColumn',
     defaultMessage: 'Learner',
     description: 'Column header for the learner progress table username column',
   },
-  'badgeAnalytics.learners.completionColumn': {
-    id: 'badgeAnalytics.learners.completionColumn',
+  'badges.analytics.learners.completionColumn': {
+    id: 'badges.analytics.learners.completionColumn',
     defaultMessage: 'Completion',
     description: 'Column header for the learner progress table completion-percent column',
   },
-  'badgeAnalytics.learners.earnedColumn': {
-    id: 'badgeAnalytics.learners.earnedColumn',
+  'badges.analytics.learners.earnedColumn': {
+    id: 'badges.analytics.learners.earnedColumn',
     defaultMessage: 'Earned',
     description: 'Column header for the learner progress table earned column',
   },
-  'badgeAnalytics.learners.awardedAtColumn': {
-    id: 'badgeAnalytics.learners.awardedAtColumn',
+  'badges.analytics.learners.awardedAtColumn': {
+    id: 'badges.analytics.learners.awardedAtColumn',
     defaultMessage: 'Awarded at',
     description: 'Column header for the learner progress table awarded-at column',
   },
-  'badgeAnalytics.learners.earnedYes': {
-    id: 'badgeAnalytics.learners.earnedYes',
+  'badges.analytics.learners.earnedYes': {
+    id: 'badges.analytics.learners.earnedYes',
     defaultMessage: 'Yes',
     description: 'Shown in the learner progress table when the learner has earned the badge',
   },
-  'badgeAnalytics.learners.earnedNo': {
-    id: 'badgeAnalytics.learners.earnedNo',
+  'badges.analytics.learners.earnedNo': {
+    id: 'badges.analytics.learners.earnedNo',
     defaultMessage: 'No',
     description: 'Shown in the learner progress table when the learner has not earned the badge',
   },
-  'badgeAnalytics.learners.previous': {
-    id: 'badgeAnalytics.learners.previous',
+  'badges.analytics.learners.previous': {
+    id: 'badges.analytics.learners.previous',
     defaultMessage: 'Previous',
     description: 'Button to go to the previous page of learner progress',
   },
-  'badgeAnalytics.learners.next': {
-    id: 'badgeAnalytics.learners.next',
+  'badges.analytics.learners.next': {
+    id: 'badges.analytics.learners.next',
     defaultMessage: 'Next',
     description: 'Button to go to the next page of learner progress',
   },
-  'badgeAnalytics.loading': {
-    id: 'badgeAnalytics.loading',
+  'badges.analytics.loading': {
+    id: 'badges.analytics.loading',
     defaultMessage: 'Loading…',
     description: 'Screen-reader text for loading spinners on the badge analytics page',
   },
-  'badgeAnalytics.summary.badgeColumn': {
-    id: 'badgeAnalytics.summary.badgeColumn',
+  'badges.analytics.summary.badgeColumn': {
+    id: 'badges.analytics.summary.badgeColumn',
     defaultMessage: 'Badge',
     description: 'Column header for the summary table badge-name column',
   },
-  'badgeAnalytics.summary.enrolledColumn': {
-    id: 'badgeAnalytics.summary.enrolledColumn',
+  'badges.analytics.summary.enrolledColumn': {
+    id: 'badges.analytics.summary.enrolledColumn',
     defaultMessage: 'Enrolled',
     description: 'Column header for the summary table enrolled-count column',
   },
-  'badgeAnalytics.summary.completedColumn': {
-    id: 'badgeAnalytics.summary.completedColumn',
+  'badges.analytics.summary.completedColumn': {
+    id: 'badges.analytics.summary.completedColumn',
     defaultMessage: 'Completed block',
     description: 'Column header for the summary table completed-block-count column',
   },
-  'badgeAnalytics.summary.awardedColumn': {
-    id: 'badgeAnalytics.summary.awardedColumn',
+  'badges.analytics.summary.awardedColumn': {
+    id: 'badges.analytics.summary.awardedColumn',
     defaultMessage: 'Awarded',
     description: 'Column header for the summary table awarded-count column',
   },
-  'badgeAnalytics.summary.rateColumn': {
-    id: 'badgeAnalytics.summary.rateColumn',
+  'badges.analytics.summary.rateColumn': {
+    id: 'badges.analytics.summary.rateColumn',
     defaultMessage: 'Award rate',
     description: 'Column header for the summary table award-rate column',
   },
-  'badgeAnalytics.summary.updatedColumn': {
-    id: 'badgeAnalytics.summary.updatedColumn',
-    defaultMessage: 'Last updated',
-    description: 'Column header for the summary table last-updated column',
-  },
-  'badgeAnalytics.summary.viewTrend': {
-    id: 'badgeAnalytics.summary.viewTrend',
+  'badges.analytics.summary.viewTrend': {
+    id: 'badges.analytics.summary.viewTrend',
     defaultMessage: 'View trend',
     description: 'Button to open the award trend modal for a badge',
   },
-  'badgeAnalytics.summary.viewLearners': {
-    id: 'badgeAnalytics.summary.viewLearners',
+  'badges.analytics.summary.viewLearners': {
+    id: 'badges.analytics.summary.viewLearners',
     defaultMessage: 'View learners',
     description: 'Button to open the learner progress modal for a badge',
   },
-  'badgeAnalytics.heading': {
-    id: 'badgeAnalytics.heading',
+  'badges.analytics.heading': {
+    id: 'badges.analytics.heading',
     defaultMessage: 'Badge Analytics',
     description: 'Page heading for the badge analytics page',
   },
-  'badgeAnalytics.summary.error': {
-    id: 'badgeAnalytics.summary.error',
+  'badges.analytics.summary.error': {
+    id: 'badges.analytics.summary.error',
     defaultMessage: 'Could not load badge stats. Please try again.',
     description: 'Error shown when the badge summary request fails',
   },
-  'badgeAnalytics.summary.empty': {
-    id: 'badgeAnalytics.summary.empty',
+  'badges.analytics.summary.empty': {
+    id: 'badges.analytics.summary.empty',
     defaultMessage: 'No badge stats yet — they appear after the next scheduled refresh.',
     description: 'Shown when badges exist but no stats have been computed yet',
   },
