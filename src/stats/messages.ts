@@ -71,6 +71,46 @@ const messages = defineMessages({
     defaultMessage: 'Loading…',
     description: 'Screen-reader text for loading spinners on the badge analytics page',
   },
+  'badgeAnalytics.summary.badgeColumn': {
+    id: 'badgeAnalytics.summary.badgeColumn',
+    defaultMessage: 'Badge',
+    description: 'Column header for the summary table badge-name column',
+  },
+  'badgeAnalytics.summary.enrolledColumn': {
+    id: 'badgeAnalytics.summary.enrolledColumn',
+    defaultMessage: 'Enrolled',
+    description: 'Column header for the summary table enrolled-count column',
+  },
+  'badgeAnalytics.summary.completedColumn': {
+    id: 'badgeAnalytics.summary.completedColumn',
+    defaultMessage: 'Completed block',
+    description: 'Column header for the summary table completed-block-count column',
+  },
+  'badgeAnalytics.summary.awardedColumn': {
+    id: 'badgeAnalytics.summary.awardedColumn',
+    defaultMessage: 'Awarded',
+    description: 'Column header for the summary table awarded-count column',
+  },
+  'badgeAnalytics.summary.rateColumn': {
+    id: 'badgeAnalytics.summary.rateColumn',
+    defaultMessage: 'Award rate',
+    description: 'Column header for the summary table award-rate column',
+  },
+  'badgeAnalytics.summary.updatedColumn': {
+    id: 'badgeAnalytics.summary.updatedColumn',
+    defaultMessage: 'Last updated',
+    description: 'Column header for the summary table last-updated column',
+  },
+  'badgeAnalytics.summary.viewTrend': {
+    id: 'badgeAnalytics.summary.viewTrend',
+    defaultMessage: 'View trend',
+    description: 'Button to open the award trend modal for a badge',
+  },
+  'badgeAnalytics.summary.viewLearners': {
+    id: 'badgeAnalytics.summary.viewLearners',
+    defaultMessage: 'View learners',
+    description: 'Button to open the learner progress modal for a badge',
+  },
 });
 
 export default messages;
