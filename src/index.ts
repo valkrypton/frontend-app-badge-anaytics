@@ -1,2 +1,2 @@
-export { default as templateApp } from './app';
-export { default as templateRoutes } from './routes';
+export { default as badgeAnalyticsApp } from './app';
+export { default as badgeAnalyticsRoutes } from './routes';

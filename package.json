@@ -1,8 +1,8 @@
 {
-  "name": "@openedx/frontend-template-application",
+  "name": "@openedx/frontend-app-badge-analytics",
   "version": "0.0.0-dev",
   "packageManager": "npm@11.12.1",
-  "description": "Frontend application template",
+  "description": "Badge analytics micro-frontend for the platform-plugin-badges Open edX plugin",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openedx/frontend-template-application.git"
@@ -24,7 +24,7 @@
     "*.scss"
   ],
   "atlasTranslations": {
-    "path": "translations/frontend-template-application/src/i18n/messages",
+    "path": "translations/frontend-app-badge-analytics/src/i18n/messages",
     "dependencies": [
       "@openedx/frontend-base"
     ]
@@ -35,7 +35,7 @@
     "build:packages": "make build-packages",
     "clean": "make clean",
     "clean:packages": "make clean-packages",
-    "dev": "PORT=8080 PUBLIC_PATH=/template openedx dev",
+    "dev": "PORT=8080 PUBLIC_PATH=/badge-analytics openedx dev",
     "dev:site": "make dev-site",
     "dev:packages": "make dev-packages",
     "i18n_extract": "openedx formatjs extract",
