@@ -7,19 +7,18 @@ describe('BadgesLayout', () => {
   it('renders a tab link for each screen', () => {
     render(
       <IntlProvider locale="en" messages={{}}>
-        <MemoryRouter initialEntries={['/course/course-v1:Org+Course+Run/configure']}>
+        <MemoryRouter initialEntries={['/course/course-v1:Org+Course+Run/catalog']}>
           <Routes>
             <Route path="course/:courseId" element={<BadgesLayout />}>
-              <Route path="configure" element={<div>configure content</div>} />
+              <Route path="catalog" element={<div>catalog content</div>} />
             </Route>
           </Routes>
         </MemoryRouter>
       </IntlProvider>,
     );
 
-    expect(screen.getByText('Configure')).toBeInTheDocument();
     expect(screen.getByText('Catalog')).toBeInTheDocument();
     expect(screen.getByText('Analytics')).toBeInTheDocument();
-    expect(screen.getByText('configure content')).toBeInTheDocument();
+    expect(screen.getByText('catalog content')).toBeInTheDocument();
   });
 });

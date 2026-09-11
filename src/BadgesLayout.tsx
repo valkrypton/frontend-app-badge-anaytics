@@ -9,9 +9,6 @@ const BadgesLayout = () => {
     <Container className="py-3">
       <Nav variant="tabs" className="mb-4">
         <Nav.Item>
-          <Nav.Link as={NavLink} to={`${base}/configure`}>Configure</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
           <Nav.Link as={NavLink} to={`${base}/catalog`}>Catalog</Nav.Link>
         </Nav.Item>
         <Nav.Item>

@@ -22,14 +22,7 @@ const routes = [
           return { Component: module.default };
         },
         children: [
-          { index: true, element: <Navigate to="configure" replace /> },
-          {
-            path: 'configure',
-            async lazy() {
-              const module = await import(/* webpackChunkName: "badges-configure" */ './configure/ConfigurePage');
-              return { Component: module.default };
-            },
-          },
+          { index: true, element: <Navigate to="catalog" replace /> },
           {
             path: 'catalog',
             async lazy() {

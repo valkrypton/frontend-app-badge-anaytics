@@ -5,10 +5,8 @@ Purpose
 *******
 
 This is a `frontend-base`_ micro-frontend for the ``platform-plugin-badges``
-Open edX plugin. It gives course staff three screens:
+Open edX plugin. It gives course staff two screens:
 
-- **Configure** — the course outline (sections, subsections, units) with a
-  badge toggle and picker per block.
 - **Catalog** — badge CRUD (name, description, image).
 - **Analytics** — per-badge award summary, award trends, and paginated
   per-learner progress.
@@ -21,8 +19,7 @@ not a standalone webpack MFE.
 Routes
 ======
 
-- ``/badges/course/:courseId`` — redirects to ``configure``.
-- ``/badges/course/:courseId/configure`` — the configure screen.
+- ``/badges/course/:courseId`` — redirects to ``catalog``.
 - ``/badges/course/:courseId/catalog`` — the catalog screen.
 - ``/badges/course/:courseId/analytics`` — the analytics screen.
 
@@ -32,8 +29,6 @@ Backend dependency
 This app calls the ``badges`` plugin's DRF API on **Studio**, via
 ``getSiteConfig().cmsBaseUrl``:
 
-- ``GET {cmsBaseUrl}/badges/api/course/<course_id>/badges/outline/``
-- ``POST {cmsBaseUrl}/badges/api/block/<usage_key>/badge_config/``
 - ``GET/POST {cmsBaseUrl}/badges/api/course/<course_id>/badges/``
 - ``GET/PUT/DELETE {cmsBaseUrl}/badges/api/course/<course_id>/badges/<badge_id>/``
 - ``GET {cmsBaseUrl}/badges/api/course/<course_id>/badges/stats/``
@@ -67,8 +62,6 @@ Project Structure
   ``frontend-base`` app layout.
 - ``src/BadgesLayout.tsx`` — tab navigation shared by all three screens.
 - ``src/test-utils.tsx`` — shared test render helper.
-- ``src/configure/`` — the configure screen: ``ConfigurePage``,
-  ``OutlineTreeNode``, ``api.ts``, ``types.ts``, ``messages.ts``.
 - ``src/catalog/`` — the catalog screen: ``CatalogPage``, ``BadgeForm``,
   ``api.ts``, ``types.ts``, ``messages.ts``.
 - ``src/stats/`` — the analytics screen: ``StatsPage``, ``SummaryTable``,
